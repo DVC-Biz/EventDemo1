@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -7,7 +8,7 @@ export default function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/placeholder.svg?height=1080&width=1920"
+          src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Conference hall"
           fill
           priority
@@ -30,13 +31,15 @@ export default function Hero() {
             <Button size="lg" className="text-lg">
               Register Now
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-lg text-white border-white hover:text-white hover:bg-white/20"
-            >
-              View Schedule
-            </Button>
+            <Link href="/schedule">
+              <Button
+                size="lg"
+                variant="secondary"
+                className="text-lg border-white hover:text-white hover:bg-white/20"
+              >
+                View Schedule
+              </Button>
+            </Link>
           </div>
           <div className="pt-6 flex items-center gap-4">
             <div className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-lg">

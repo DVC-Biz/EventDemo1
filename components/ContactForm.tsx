@@ -15,7 +15,7 @@ import {
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-// import { toast } from "@/hooks/use-toast";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -46,10 +46,9 @@ export default function ContactForm() {
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     console.log(values);
-    // toast({
-    //   title: "Message sent!",
-    //   description: "We'll get back to you as soon as possible.",
-    // });
+    toast("Message sent!", {
+      description: "We'll get back to you as soon as possible.",
+    });
 
     form.reset();
     setIsSubmitting(false);

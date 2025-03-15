@@ -3,6 +3,7 @@ import EventDetails from "@/components/EventDetails";
 import Speakers from "@/components/sections/Speakers";
 import Testimonials from "@/components/sections/Testimonials";
 import ContactForm from "@/components/ContactForm";
+import Footer from "@/components/layout/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function Home() {
       <Speakers />
       <Testimonials />
       <ContactForm />
+      <Footer />
     </main>
   );
 }

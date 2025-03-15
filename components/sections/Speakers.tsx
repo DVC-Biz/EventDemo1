@@ -65,10 +65,6 @@ export default function Speakers() {
             </Card>
           ))}
         </div>
-
-        <div className="text-center mt-12">
-          <Button size="lg">View All Speakers</Button>
-        </div>
       </div>
     </section>
   );

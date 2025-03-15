@@ -6,8 +6,8 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import { Toaster } from "@/components/ui/sonner";
 import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -43,9 +43,9 @@ export default async function RootLayout({
             <div className="flex-1">
               <NextIntlClientProvider messages={messages}>
                 {children}
+                <Toaster />
               </NextIntlClientProvider>
             </div>
-            <Footer />
           </div>
         </ThemeProvider>
       </body>
